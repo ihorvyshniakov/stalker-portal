@@ -1,20 +1,16 @@
 import { Box, Container } from '@mui/material'
 
 import Path from './Path'
-
-const Wrapper = ({ children }) => {
-	return (
-		<Box sx={{ bgcolor: '#cfe8fc', pb: 10, minHeight: '100vmin' }}>
-			<Container maxWidth="md">{children}</Container>
-		</Box>
-	)
-}
+import WeaponPage from './WeaponPage'
 
 const Content = () => {
 	return (
-		<Wrapper>
-			<Path />
-		</Wrapper>
+		<Box sx={{ bgcolor: '#cfe8fc', pb: 10 }}>
+			<Container maxWidth="lg">
+				<Path />
+				<WeaponPage />
+			</Container>
+		</Box>
 	)
 }
 
