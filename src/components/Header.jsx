@@ -1,14 +1,7 @@
-import {
-	AppBar,
-	Box,
-	InputBase,
-	Link,
-	Toolbar,
-	Typography,
-} from '@mui/material'
+import { AppBar, Box, InputBase, Toolbar, Typography } from '@mui/material'
 import { styled, alpha } from '@mui/material/styles'
-
 import SearchIcon from '@mui/icons-material/Search'
+import { Link } from 'react-router'
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
@@ -58,18 +51,14 @@ const Header = () => {
 			<AppBar position="static">
 				<Toolbar>
 					<Typography variant="h5">
-						<Link underline="none" color="inherit" href="">
-							Путівник Stalker 2
-						</Link>
+						<Link to="/">Путівник Stalker 2</Link>
 					</Typography>
 					<Typography
 						variant="h5"
 						align="center"
 						sx={{ flexGrow: 1 }}
 					>
-						<Link underline="none" color="inherit" href="">
-							Зброя
-						</Link>
+						<Link to="/weapons">Зброя</Link>
 					</Typography>
 					<Search>
 						<SearchIconWrapper>
