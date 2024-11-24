@@ -1,14 +1,13 @@
 import {
 	AppBar,
 	Box,
-	IconButton,
 	InputBase,
+	Link,
 	Toolbar,
 	Typography,
 } from '@mui/material'
 import { styled, alpha } from '@mui/material/styles'
 
-import MenuIcon from '@mui/icons-material/Menu'
 import SearchIcon from '@mui/icons-material/Search'
 
 const Search = styled('div')(({ theme }) => ({
@@ -58,20 +57,19 @@ const Header = () => {
 		<Box sx={{ flexGrow: 1 }}>
 			<AppBar position="static">
 				<Toolbar>
-					<IconButton
-						size="large"
-						edge="start"
-						color="inherit"
-						aria-label="menu"
-						sx={{ mr: 2 }}
-					>
-						<MenuIcon />
-					</IconButton>
-					<Typography variant="h5" sx={{ flexGrow: 1 }}>
-						Путівник Stalker 2
+					<Typography variant="h5">
+						<Link underline="none" color="inherit" href="">
+							Путівник Stalker 2
+						</Link>
 					</Typography>
-					<Typography variant="h5" sx={{ flexGrow: 1 }}>
-						Зброя
+					<Typography
+						variant="h5"
+						align="center"
+						sx={{ flexGrow: 1 }}
+					>
+						<Link underline="none" color="inherit" href="">
+							Зброя
+						</Link>
 					</Typography>
 					<Search>
 						<SearchIconWrapper>
