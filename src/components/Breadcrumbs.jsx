@@ -1,14 +1,14 @@
-import { Typography, Breadcrumbs } from '@mui/material'
+import { Typography, Breadcrumbs as MaterialBreadcrumbs } from '@mui/material'
 import { Link, useLocation } from 'react-router'
 
 import { urlTranslations } from '../routes/urlTranslations'
 
-const Path = () => {
+const Breadcrumbs = () => {
 	let { pathname } = useLocation()
 	const linksArray = pathname.slice(1).split('/')
 
 	return (
-		<Breadcrumbs aria-label="breadcrumb" sx={{ p: 2 }}>
+		<MaterialBreadcrumbs aria-label="breadcrumb" sx={{ p: 2 }}>
 			<Link to="/">Путівник</Link>
 			{linksArray.map((pageName, id) => {
 				const isLastLink = id === linksArray.length - 1
@@ -30,8 +30,8 @@ const Path = () => {
 					</Link>
 				)
 			})}
-		</Breadcrumbs>
+		</MaterialBreadcrumbs>
 	)
 }
 
-export default Path
+export default Breadcrumbs

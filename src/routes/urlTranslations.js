@@ -3,4 +3,5 @@ export const urlTranslations = {
 	artifacts: 'Артефакти',
 	characters: 'Персонажі',
 	locations: 'Локації',
+	vintar: 'Гвинтар',
 }

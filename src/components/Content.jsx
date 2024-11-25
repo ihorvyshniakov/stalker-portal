@@ -2,10 +2,10 @@ import { Box, Card, CardContent, Container } from '@mui/material'
 import Grid from '@mui/material/Grid2'
 import { Route, Routes } from 'react-router'
 
-import Path from './Path'
 import WeaponPage from './WeaponPage'
 import Weapons from './Weapons'
 import Home from './Home'
+import Breadcrumbs from './Breadcrumbs'
 
 const Content = () => {
 	return (
@@ -13,7 +13,7 @@ const Content = () => {
 			sx={{ bgcolor: '#cfe8fc', pb: 10, minHeight: 'calc(100vh - 64px)' }}
 		>
 			<Container maxWidth="lg">
-				<Path />
+				<Breadcrumbs />
 				<Card raised>
 					<CardContent>
 						<Grid
