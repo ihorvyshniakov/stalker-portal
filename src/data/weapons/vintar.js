@@ -1,5 +1,6 @@
 export default {
 	name: 'Гвинтар',
+	url: '/weapons/vintar',
 	info: [
 		{
 			statName: 'Тип',

@@ -16,7 +16,11 @@ const Content = () => {
 				<Path />
 				<Card raised>
 					<CardContent>
-						<Grid container spacing={2}>
+						<Grid
+							container
+							spacing={2}
+							sx={{ justifyContent: 'center' }}
+						>
 							<Routes>
 								<Route index element={<Home />} />
 								<Route path="weapons" element={<Weapons />} />
