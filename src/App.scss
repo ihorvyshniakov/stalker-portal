@@ -9,3 +9,16 @@ a {
 header a {
 	text-decoration: none;
 }
+
+.homeLink {
+	text-decoration: none;
+	color: white;
+
+	* {
+		display: inline-block;
+		text-align: center;
+		height: 250px;
+		line-height: 250px;
+		width: 100%;
+	}
+}
