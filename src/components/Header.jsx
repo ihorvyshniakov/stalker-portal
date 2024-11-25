@@ -1,7 +1,8 @@
 import { AppBar, Box, InputBase, Toolbar, Typography } from '@mui/material'
 import { styled, alpha } from '@mui/material/styles'
 import SearchIcon from '@mui/icons-material/Search'
-import { Link } from 'react-router'
+import { Link, useLocation } from 'react-router'
+import { urlTranslations } from '../routes/urlTranslations'
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
@@ -46,6 +47,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }))
 
 const Header = () => {
+	let { pathname } = useLocation()
+	const categoryName = pathname.slice(1).split('/')[0]
+
 	return (
 		<Box sx={{ flexGrow: 1 }}>
 			<AppBar position="static">
@@ -58,7 +62,9 @@ const Header = () => {
 						align="center"
 						sx={{ flexGrow: 1 }}
 					>
-						<Link to="/weapons">Зброя</Link>
+						<Link to="/weapons">
+							{urlTranslations[`${categoryName}`]}
+						</Link>
 					</Typography>
 					<Search>
 						<SearchIconWrapper>
